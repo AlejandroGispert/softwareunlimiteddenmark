@@ -29,7 +29,7 @@ function Home() {
             Software Unlimited Denmark
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] tracking-tight mb-6">
-            Building{" "}
+            Creating{" "}
             <span className="text-glow font-semibold text-white">
               Digital Solutions
             </span>
@@ -37,8 +37,8 @@ function Home() {
             That Matter
           </h1>
           <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10">
-            We empower organizations with software that turns complex challenges
-            into real-world outcomes. Software Unlimited Denmark.
+            We enable organizations with software that transforms complex
+            challenges into tangible results. Software Unlimited Denmark.
           </p>
           <a href="#contact" className="btn-primary text-white inline-block">
             Start Your Project
@@ -57,7 +57,7 @@ function Home() {
           </div>
           <div className="text-center">
             <p className="text-4xl md:text-5xl font-semibold text-glow-subtle mb-2">
-              100%
+              96%
             </p>
             <p className="text-sm uppercase tracking-widest text-white/50">
               Client Satisfaction
@@ -65,7 +65,7 @@ function Home() {
           </div>
           <div className="text-center">
             <p className="text-4xl md:text-5xl font-semibold text-glow-subtle mb-2">
-              24/7
+              7/7
             </p>
             <p className="text-sm uppercase tracking-widest text-white/50">
               Support Available
