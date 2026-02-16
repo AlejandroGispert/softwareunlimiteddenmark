@@ -1,0 +1,122 @@
+@import 'tailwindcss' source('../');
+
+/* Liquid Glass Theme - AG-SOUND / Antimatter AI style */
+@theme {
+  --color-bg-deep: #050508;
+  --color-bg-dark: #0a0a12;
+  --color-bg-mid: #0f0f1a;
+  --color-accent: #6366f1;
+  --color-accent-glow: rgba(99, 102, 241, 0.4);
+  --color-accent-soft: rgba(129, 140, 248, 0.3);
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  * {
+    @apply border-white/5;
+  }
+
+  html,
+  body {
+    @apply antialiased;
+    background: linear-gradient(
+      135deg,
+      #050508 0%,
+      #0a0a14 25%,
+      #0f0f1c 50%,
+      #0a0a12 75%,
+      #050508 100%
+    );
+    color: rgba(255, 255, 255, 0.95);
+    min-height: 100vh;
+  }
+
+  .using-mouse * {
+    outline: none !important;
+  }
+}
+
+/* Liquid Glass Components */
+@layer components {
+  /* Glass panel - frosted, translucent */
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-nav {
+    background: rgba(10, 10, 18, 0.7);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  /* Glow text effect */
+  .text-glow {
+    text-shadow:
+      0 0 20px rgba(99, 102, 241, 0.4),
+      0 0 40px rgba(99, 102, 241, 0.2);
+  }
+
+  .text-glow-subtle {
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  }
+
+  /* CTA Button - gradient like Antimatter */
+  .btn-primary {
+    @apply rounded-full px-8 py-4 font-medium transition-all duration-300;
+    background: linear-gradient(
+      135deg,
+      rgba(99, 102, 241, 0.9) 0%,
+      rgba(129, 140, 248, 0.9) 100%
+    );
+    box-shadow:
+      0 4px 20px rgba(99, 102, 241, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-primary:hover {
+    box-shadow:
+      0 6px 30px rgba(99, 102, 241, 0.4),
+      0 0 40px rgba(99, 102, 241, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+  }
+
+  /* Subtle nebula breathing animation */
+  @keyframes nebula-pulse {
+    0%,
+    100% {
+      opacity: 0.45;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(1.02);
+    }
+  }
+
+  .nebula-pulse {
+    animation: nebula-pulse 8s ease-in-out infinite;
+  }
+}
