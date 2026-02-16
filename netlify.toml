@@ -1,3 +1,6 @@
 [build]
-  command = "npm run build"
-  publish = "dist/client"
+  command = "vite build"
+  publish = "dist"
+
+[build.environment]
+  NITRO_PRESET = "netlify"
