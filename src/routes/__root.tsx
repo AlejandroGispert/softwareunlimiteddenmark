@@ -10,6 +10,7 @@ import * as React from "react";
 import { DefaultCatchBoundary } from "~/components/DefaultCatchBoundary";
 import { NotFound } from "~/components/NotFound";
 import appCss from "~/styles/app.css?url";
+import logoSvg from "~/assets/favicon.svg?url";
 import { seo } from "~/utils/seo";
 
 export const Route = createRootRoute({
@@ -45,27 +46,9 @@ export const Route = createRootRoute({
       {
         rel: "icon",
         type: "image/svg+xml",
-        href: "/favicon.svg",
-      },
-      {
-        rel: "apple-touch-icon",
-        sizes: "180x180",
-        href: "/favicon.svg",
-      },
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "32x32",
-        href: "/favicon-32x32.png",
-      },
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "16x16",
-        href: "/favicon-16x16.png",
+        href: "/favicon.svg?v=2",
       },
       { rel: "manifest", href: "/site.webmanifest", color: "#0a0a0f" },
-      { rel: "icon", href: "/favicon.ico" },
     ],
     scripts: [
       {
@@ -111,12 +94,14 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <nav className="glass-nav fixed top-0 left-0 right-0 z-50">
           <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <Link to="/" className="flex items-center gap-3 group">
-              <span className="text-xl font-semibold tracking-tight text-white/95 group-hover:text-white transition-colors">
-                AG-SOUND
-              </span>
-              <span className="text-xs text-white/50 hidden sm:inline">
-                Software Unlimited Denmark
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xl font-semibold tracking-tight text-white/95 group-hover:text-white transition-colors leading-tight">
+                  AG-SOUND
+                </span>
+                <span className="text-xs text-white/50 hidden sm:inline">
+                  Software Unlimited Denmark
+                </span>
+              </div>
             </Link>
             <div className="flex items-center gap-6">
               <a href="/#contact" className="btn-primary text-white text-sm">
