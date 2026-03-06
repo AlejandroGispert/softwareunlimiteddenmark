@@ -74,6 +74,58 @@ function Home() {
         </div>
       </section>
 
+      {/* 2026 Showcase - our current demo projects */}
+      <section
+        id="showcase"
+        className="relative py-24 px-6 border-t border-white/5"
+      >
+        <div className="max-w-6xl mx-auto">
+          <p className="text-sm uppercase tracking-[0.3em] text-white/50 mb-2">
+            Live now
+          </p>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-2">
+            2026 Showcase
+          </h2>
+          <p className="text-white/60 max-w-2xl mb-12">
+            Apps we're showcasing this year. Try them live.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <a
+              href="https://macremotecontroller.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass rounded-2xl p-8 hover:border-white/15 transition-all group block"
+            >
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-white transition-colors">
+                Mac Remote Controller
+              </h3>
+              <p className="text-white/60 text-sm mb-4">
+                Control your Mac remotely from any device.
+              </p>
+              <span className="text-sm text-accent font-medium">
+                Visit site →
+              </span>
+            </a>
+            <a
+              href="https://casechronicles.dk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass rounded-2xl p-8 hover:border-white/15 transition-all group block"
+            >
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-white transition-colors">
+                Case Chronicles
+              </h3>
+              <p className="text-white/60 text-sm mb-4">
+                Document and share case studies.
+              </p>
+              <span className="text-sm text-accent font-medium">
+                Visit site →
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Services preview section */}
       <section
         id="services"
